@@ -1,0 +1,61 @@
+@import "/src/styles/root.scss";
+
+.cart-panel {
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		@include font-roboto;
+		width: 100%;
+		max-width: 320px;
+		border-bottom: $colour-gray-borders solid 1px;
+
+		margin-top: 8px;
+		@include media-desktop {
+			margin-top: 12px;
+		}
+	}
+
+	&__item-image-container {
+		margin-top: 12px;
+		flex: 1 1 0;
+	}
+
+	&__item-image {
+		width: 100%;
+	}
+	&__item-detail {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		margin-left: 14px;
+		min-height: 140px;
+		max-width: 160px;
+
+		@include media-desktop {
+			min-height: 160px;
+		}
+	}
+	&__item-cost {
+		@include font-opensans;
+		color: $colour-orange;
+		font-weight: 600;
+	}
+
+	&__item-remove-button {
+		font-size: 10px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		margin-top: 16px;
+		padding: 0px;
+		color: $colour-gray-text;
+		border-bottom: $colour-gray-text solid 1px;
+		cursor: pointer;
+	}
+
+	&__item-divider {
+		width: 100%;
+		border-color: $colour-gray-borders;
+	}
+}

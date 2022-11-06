@@ -1,0 +1,20 @@
+@import "/src/styles/root.scss";
+
+.cart-count-container {
+	background-image: url("/src/assets/layers/svg/bag.svg");
+	background-repeat: no-repeat;
+	background-size: 26px 32px;
+	background-position: center;
+	cursor: pointer;
+
+	// Make the button a little larger than the icon for ease of mobile interaction
+	width: 48px;
+	height: 48px;
+	padding: 18px 20px;
+
+	&__counter-text {
+		@include font-opensans;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}

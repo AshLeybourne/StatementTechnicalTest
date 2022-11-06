@@ -1,0 +1,47 @@
+@import "/src/styles/root.scss";
+
+@mixin collapsible-panel-fullsize {
+	width: calc(100vw - 45px);
+
+	@include media-tablet {
+		width: 430px;
+	}
+}
+
+.collapsible-panel {
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: fit-content;
+	width: 0px;
+	transition: width 0.5s;
+	top: 0;
+	right: 0;
+	background-color: $colour-white;
+	overflow: hidden;
+	z-index: 15;
+}
+
+.collapsible-panel__content {
+	@include collapsible-panel-fullsize;
+}
+
+.collapsible-panel--expanded {
+	@include collapsible-panel-fullsize;
+}
+
+.screen-fade {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s;
+	background-color: black;
+	z-index: 10;
+}
+.screen-fade--active {
+	opacity: 0.25;
+}

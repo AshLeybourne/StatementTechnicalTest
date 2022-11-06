@@ -1,0 +1,43 @@
+@import "/src/styles/root.scss";
+
+.loading-cover {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $colour-white;
+	opacity: 0;
+	transition: opacity 0.1s;
+
+	align-items: center;
+	justify-content: center;
+
+	&__progress-background {
+		position: relative;
+		border-radius: 10px;
+		width: 60%;
+		height: 32px;
+		background-color: $colour-gray-borders;
+		overflow: hidden;
+	}
+
+	&__progress-foreground {
+		position: absolute;
+		background-color: $colour-orange;
+		width: 0%;
+		height: 100%;
+		transition: width 0.25s linear 1s;
+	}
+
+	.loading-cover-active &__progress-foreground {
+		width: 100%;
+		transition: width 1s;
+	}
+}
+
+.loading-cover-active {
+	opacity: 0.6;
+	transition: opacity 0.25s;
+}

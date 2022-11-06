@@ -1,0 +1,47 @@
+// Provide base style variables and sitewide mixins that can be used by all components within the site
+$breakpoint-tablet-width: 768px;
+$breakpoint-desktop-width: 992px;
+
+$colour-main-background: #ebf6f8;
+$colour-orange: #ff5c00;
+$colour-gray-borders: #ebebeb;
+$colour-black-text: #000000;
+$colour-gray-text: #9f9f9f;
+$colour-white: #ffffff;
+
+@mixin media-desktop {
+	@media screen and (min-width: $breakpoint-desktop-width) {
+		@content;
+	}
+}
+
+@mixin media-tablet {
+	@media screen and (min-width: $breakpoint-tablet-width) {
+		@content;
+	}
+}
+
+@mixin font-roboto {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+@mixin font-opensans {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+// We want to use buttons for accessibility but don't want default styles
+button {
+	outline: none;
+	background: transparent;
+	border: none;
+}
+
+*:focus,
+button:focus,
+button:active {
+	outline: 1px solid teal;
+	outline-offset: 1px;
+}

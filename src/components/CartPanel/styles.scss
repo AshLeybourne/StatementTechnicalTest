@@ -1,0 +1,88 @@
+@import "/src/styles/root.scss";
+
+.cart-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+	height: 100%;
+	padding: 13px 4px 30px 4px;
+	border-left: $colour-gray-borders 1px solid;
+
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: 0px 11px 10px 28px;
+		@include media-desktop {
+			padding-right: 34px;
+			padding-left: 52px;
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	&__close-button {
+		// Button made a little bigger than icon to make it easier to hit on mobile
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+		padding: 17px;
+	}
+
+	&__close-wrapper {
+		padding: 0;
+		margin-top: 4px;
+	}
+
+	&__content {
+		flex-grow: 1;
+		overflow-y: scroll;
+		width: 100%;
+		display: flex;
+		padding: 0px 32px;
+		flex-direction: column;
+		align-items: center;
+		border-top: $colour-gray-borders solid 1px;
+		border-bottom: $colour-gray-borders solid 1px;
+	}
+
+	&__subtotal {
+		margin-top: 26px;
+		font-weight: 400;
+		font-size: 18px;
+	}
+
+	&__proceed-button {
+		margin: 20px 38px;
+		width: 100%;
+		max-width: 304px;
+
+		@include media-desktop {
+			width: 100%;
+			max-width: 320px;
+		}
+	}
+
+	&__back-button {
+		margin: 8px;
+		font-size: 12px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		padding-bottom: 4px;
+		border-bottom: black solid 1px;
+		cursor: pointer;
+	}
+
+	&__divider {
+		width: 100%;
+		margin: 8px;
+		border-width: 0.5px;
+		border-color: $colour-gray-borders;
+	}
+}
